@@ -9,4 +9,5 @@ import (
 func main() {
 	var greeting = helloworld.HelloWorld("moledoc")
 	fmt.Println(greeting)
+	fmt.Println(helloworld.HelloWorldDifferentAssign("moledoc"))
 }

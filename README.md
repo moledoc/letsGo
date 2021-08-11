@@ -7,7 +7,10 @@ that are the result of me learning the programming language.
 
 ## Contents
 
-* HelloWorld - returns greeting to given string value
+* HelloWorld - variable related examples (passing args, func type, returns, variable assignments)
+  * HelloWorld - returns greeting to given string value
+  * HelloWorldMultiReturn - returns two different greetings
+* Cycles - different cycles in GoLang
 
 ## Author
 
