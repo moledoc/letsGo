@@ -38,7 +38,7 @@ func HelloWorldDifferentAssign(name string) (string, uint64) {
 	// multiple variable declarations on the same line; each can have one value
 	var frthGreet, number = thrdGreet, 2 + MaxInt
 	if ToBe {
-		fmt.Printf("Printing out different formats: %v (type = %T) (default = %q)\n", z, z, z)
+		fmt.Printf("Printing out different formats: %v (type = %T); default value of MaxInt = %q\n", z, z, MaxInt)
 	}
 	return frthGreet, number
 }

@@ -10,7 +10,14 @@ that are the result of me learning the programming language.
 * HelloWorld - variable related examples (passing args, func type, returns, variable assignments)
   * HelloWorld - returns greeting to given string value
   * HelloWorldMultiReturn - returns two different greetings
-* Cycles - different cycles in GoLang
+* Loops - different cycles in GoLang
+  * ForLoop - typical `for` loop
+  * BasicallyWhileLoop - `go` version of a `while` loop
+* IfElse
+  * BasicIf - typical `if` statement
+  * AssignInIf - `if` statement with declaring a variable for that corresponding `if` statement
+  * AssignInIfElse - `if-else` statement with declaring a variable for that corresponding `if-else` statement
+
 
 ## Author
 
