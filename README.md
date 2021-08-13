@@ -13,10 +13,12 @@ that are the result of me learning the programming language.
 * Loops - different cycles in GoLang
   * ForLoop - typical `for` loop
   * BasicallyWhileLoop - `go` version of a `while` loop
-* IfElse
+* IfElse - if-else statement in GoLang
   * BasicIf - typical `if` statement
   * AssignInIf - `if` statement with declaring a variable for that corresponding `if` statement
   * AssignInIfElse - `if-else` statement with declaring a variable for that corresponding `if-else` statement
+* Sqrt - just cool/interesting exercise in 'A tour of Go' about calculating the square root of a number
+  * Sqrt - calc square root of a number with error < 0.001 with Newton's method.
 
 
 ## Author
