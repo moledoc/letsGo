@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	helloworld "github.com/moledoc/letsgo/HelloWorld"
 	loops "github.com/moledoc/letsgo/Loops"
+	sqrt "github.com/moledoc/letsgo/Sqrt"
 )
 
 func main() {
@@ -15,4 +17,10 @@ func main() {
 	//Loops
 	endpoint := 10
 	fmt.Printf("Summing all values from 0 to %d results in %v\n", endpoint, loops.ForLoop(endpoint))
+
+	sqrtVal, err := sqrt.Sqrt(16)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("My Sqrt(16)=%v\n", sqrtVal)
 }
