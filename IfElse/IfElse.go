@@ -1,6 +1,10 @@
 package ifelse
 
-import "math"
+import (
+	"fmt"
+	"math"
+	"time"
+)
 
 // basic if statement
 func BasicIf(a int, b int) bool {
@@ -36,5 +40,25 @@ func Switch(a float64) string {
 		return "Odd"
 	default:
 		return ""
+	}
+}
+
+// you can use functions inside a switch statement
+func In6Days(today time.Weekday) time.Weekday {
+	return today + 6
+}
+
+// switch v2
+func SwitchV2() string {
+	today := time.Now().Weekday()
+	switch time.Saturday {
+	case today + 0:
+		return "Today."
+	case today + 1:
+		return "Tomorrow."
+	case In6Days(today):
+		return fmt.Sprintf("In %v days.\n", 6)
+	default:
+		return "Between 2-5 days"
 	}
 }

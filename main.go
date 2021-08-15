@@ -5,6 +5,7 @@ import (
 	"log"
 
 	helloworld "github.com/moledoc/letsgo/HelloWorld"
+	ifelse "github.com/moledoc/letsgo/IfElse"
 	loops "github.com/moledoc/letsgo/Loops"
 	sqrt "github.com/moledoc/letsgo/Sqrt"
 )
@@ -23,4 +24,6 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("My Sqrt(16)=%v\n", sqrtVal)
+
+	fmt.Printf("When is Saturday? %v\n", ifelse.SwitchV2())
 }
