@@ -7,6 +7,7 @@ import (
 	helloworld "github.com/moledoc/letsgo/HelloWorld"
 	ifelse "github.com/moledoc/letsgo/IfElse"
 	loops "github.com/moledoc/letsgo/Loops"
+	moretypes "github.com/moledoc/letsgo/MoreTypes"
 	sqrt "github.com/moledoc/letsgo/Sqrt"
 )
 
@@ -19,11 +20,22 @@ func main() {
 	endpoint := 10
 	fmt.Printf("Summing all values from 0 to %d results in %v\n", endpoint, loops.ForLoop(endpoint))
 
+	// sqrt implementation
 	sqrtVal, err := sqrt.Sqrt(16)
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Printf("My Sqrt(16)=%v\n", sqrtVal)
 
+	// ifelse
 	fmt.Printf("When is Saturday? %v\n", ifelse.SwitchV2())
+
+	// moretypes
+	//// pointers
+	fmt.Println(moretypes.Pointer())
+	//// structs
+	fmt.Println(moretypes.StructAndPointer())
+	//// Arrays
+	fmt.Println(moretypes.Arrays())
+
 }
