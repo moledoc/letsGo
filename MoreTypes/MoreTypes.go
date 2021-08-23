@@ -47,3 +47,62 @@ func Arrays() [3]Date {
 	dates[2] = *testDate3
 	return dates
 }
+
+func Slice() []int {
+	var numbers = [6]int{0, 1, 2, 3, 4, 5}
+	return numbers[3:5]
+}
+
+func SliceAsRef() ([4]string, []string, []string) {
+	names := [4]string{
+		"John",
+		"Paul",
+		"George",
+		"Ringo",
+	}
+
+	a := names[0:2]
+	b := names[1:3]
+
+	b[0] = "XXX"
+	return names, a, b
+}
+
+func SliceLiteral() ([]int, []bool, []struct {
+	i int
+	b bool
+}) {
+	var nrs = []int{2, 3, 5, 7, 11, 13}
+
+	bools := []bool{true, false, true, true, false, true}
+
+	structSlice := []struct {
+		i int
+		b bool
+	}{
+		{2, true},
+		{3, false},
+		{5, true},
+		{7, true},
+		{11, false},
+		{13, true},
+	}
+	return nrs, bools, structSlice
+}
+
+func SliceMatrix() [][]string {
+	// Create a tic-tac-toe board.
+	board := [][]string{
+		{"_", "_", "_"},
+		{"_", "_", "_"},
+		{"_", "_", "_"},
+	}
+	// The players take turns.
+	board[0][0] = "X"
+	board[2][2] = "O"
+	board[1][2] = "X"
+	board[1][0] = "O"
+	board[0][2] = "X"
+
+	return board
+}

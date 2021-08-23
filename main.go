@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"strings"
 
 	helloworld "github.com/moledoc/letsgo/HelloWorld"
 	ifelse "github.com/moledoc/letsgo/IfElse"
@@ -37,5 +38,15 @@ func main() {
 	fmt.Println(moretypes.StructAndPointer())
 	//// Arrays
 	fmt.Println(moretypes.Arrays())
+	//// Slices
+	fmt.Println(moretypes.Slice())
+	fmt.Println(moretypes.SliceAsRef())
+	var nrs, bools, sliceLiteral = moretypes.SliceLiteral()
+	fmt.Printf("This is int slice %v, this is a boolean slice %v, this a slice literal %v with types %T\n", nrs, bools, sliceLiteral, sliceLiteral)
+
+	board := moretypes.SliceMatrix()
+	for i := 0; i < len(board); i++ {
+		fmt.Printf("%s\n", strings.Join(board[i], " "))
+	}
 
 }
