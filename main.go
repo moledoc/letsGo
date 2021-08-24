@@ -49,4 +49,38 @@ func main() {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
 
+	//// Map
+	fmt.Println(moretypes.WordCount("The quick brown fox jumped over the lazy dog."))
+
+	//// Function as value
+	// moretypes.FuncAsVal uses x=7 and y=3
+	Multiply := func(x float32, y float32) float32 {
+		return x * y
+	}
+	// naive power function
+	Power := func(x float32, y float32) float32 {
+		var power float32 = 1
+		for y > 0 {
+			power *= x
+			y--
+		}
+		return power
+	}
+	fmt.Println(moretypes.FuncAsVal(Multiply))
+	fmt.Println(moretypes.FuncAsVal(Power))
+
+	//// Function closure
+	subtractor := moretypes.Subtractr()
+	fmt.Println(subtractor(5)) // expected -5
+	fmt.Println(subtractor(2)) // expected -7
+
+	fib := moretypes.Fibonacci()
+	for i := 0; i < 10; i++ {
+		if i == 9 {
+			fmt.Printf("%v\n", fib())
+			break
+		}
+		fmt.Printf("%v,", fib())
+	}
+
 }
