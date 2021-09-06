@@ -5,6 +5,7 @@ import (
 	"log"
 	"strings"
 
+	errors "github.com/moledoc/letsgo/Errors"
 	helloworld "github.com/moledoc/letsgo/HelloWorld"
 	ifelse "github.com/moledoc/letsgo/IfElse"
 	loops "github.com/moledoc/letsgo/Loops"
@@ -83,4 +84,7 @@ func main() {
 		fmt.Printf("%v,", fib())
 	}
 
+	// Errors
+	fmt.Println(errors.Sqrt(2))
+	fmt.Println(errors.Sqrt(-2))
 }

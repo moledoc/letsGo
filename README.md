@@ -35,6 +35,8 @@ It is meant to be testing and showing Go and it's concepts/ideas/possibilities.
   * FuncAsVal - how `func` can be a value
   * Subtractr - example of function closure
   * Fibonacci - Fibonacci nr solution with function closure
+* Errors - example exercise w/ defining Error type
+  * Sqrt - previously defined sqrt function, but now with error handling.
 
 ## Further reading
 
