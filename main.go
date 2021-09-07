@@ -5,11 +5,14 @@ import (
 	"log"
 	"strings"
 
+	"golang.org/x/tour/reader"
+
 	errors "github.com/moledoc/letsgo/Errors"
 	helloworld "github.com/moledoc/letsgo/HelloWorld"
 	ifelse "github.com/moledoc/letsgo/IfElse"
 	loops "github.com/moledoc/letsgo/Loops"
 	moretypes "github.com/moledoc/letsgo/MoreTypes"
+	rdr "github.com/moledoc/letsgo/Readers"
 	sqrt "github.com/moledoc/letsgo/Sqrt"
 )
 
@@ -87,4 +90,8 @@ func main() {
 	// Errors
 	fmt.Println(errors.Sqrt(2))
 	fmt.Println(errors.Sqrt(-2))
+
+	// Readers
+	fmt.Println("Go tour Reader exercise validation")
+	reader.Validate(rdr.MyReader{})
 }
