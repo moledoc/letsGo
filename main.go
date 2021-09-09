@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"log"
+	"os"
 	"strings"
 
 	"golang.org/x/tour/reader"
@@ -94,4 +96,9 @@ func main() {
 	// Readers
 	fmt.Println("Go tour Reader exercise validation")
 	reader.Validate(rdr.MyReader{})
+
+	fmt.Println("Go tour rot13Reader exercise")
+	s := strings.NewReader("Lbh penpxrq gur pbqr!")
+	r := rdr.Rot13Reader{s}
+	io.Copy(os.Stdout, &r)
 }
