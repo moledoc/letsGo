@@ -3,7 +3,7 @@ package goroutine_test
 import (
 	"testing"
 
-	gr "github.com/moledoc/letsGo/Goroutine"
+	gr "github.com/moledoc/letsgo/Goroutines"
 	"golang.org/x/tour/tree"
 )
 
