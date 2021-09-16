@@ -39,7 +39,7 @@ It is meant to be testing and showing Go and it's concepts/ideas/possibilities.
   * Sqrt - previously defined sqrt function, but now with error handling.
 * Images - go tour Images example exercise
 * Readers - go tour Reader example exercise
-* Goroutines - go tour Goroutine example exercise
+* Goroutines - go tour Goroutine and Mutex example exercises
 
 ## Further reading
 
