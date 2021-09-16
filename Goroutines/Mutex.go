@@ -5,14 +5,16 @@ import (
 	"sync"
 )
 
+// self added:
 type mutexURLCache struct {
 	mux      sync.Mutex
 	seenURLs map[string]bool
 }
 
-// init the url cache struct
+// self added: init the url cache struct
 var urlCache = mutexURLCache{seenURLs: make(map[string]bool)}
 
+// self added:
 // method to check, if given url is cached.
 // if yes, then return true (means corresponding goroutine will exit crawl from given url)
 // if no, then add the url to cache and return false (goroutine will crawl this url)
@@ -35,7 +37,7 @@ type Fetcher interface {
 // Crawl uses fetcher to recursively crawl
 // pages starting with url, to a maximum of depth.
 func crawlInner(url string, depth int, fetcher Fetcher, waitGroup *sync.WaitGroup) {
-	defer waitGroup.Done()
+	defer waitGroup.Done() // self added
 	// TODO: Fetch URLs in parallel.
 	// TODO: Don't fetch the same URL twice.
 	// This implementation doesn't do either:
@@ -43,7 +45,7 @@ func crawlInner(url string, depth int, fetcher Fetcher, waitGroup *sync.WaitGrou
 		return
 	}
 
-	// check if we have seen this url
+	// self added: check if we have seen this url
 	if urlCache.isSeen(url) {
 		return
 	}
@@ -55,15 +57,15 @@ func crawlInner(url string, depth int, fetcher Fetcher, waitGroup *sync.WaitGrou
 	}
 	fmt.Printf("found: %s %q\n", url, body)
 	for _, u := range urls {
-		waitGroup.Add(1)
-		crawlInner(u, depth-1, fetcher, waitGroup)
+		waitGroup.Add(1) // self added
+		go crawlInner(u, depth-1, fetcher, waitGroup)
 		//fmt.Println(u)
 		//fmt.Println((*urlCache).seenURLs)
 	}
 	return
 }
 
-// create a wrapper function (for waiting group).
+// self added: create a wrapper function (for waiting group).
 // without waiting group, the code will exit after the first goroutine finishes.
 func Crawl(url string, depth int, fetcher Fetcher) {
 	waitGroup := &sync.WaitGroup{}

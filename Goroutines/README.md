@@ -37,3 +37,10 @@ Then read and print 10 values from the channel. It should be the numbers 1, 2, 3
 `Same(tree.New(1), tree.New(1))` should return `true` and `Same(tree.New(1), tree.New(2))` should return `false`.
 
 The documentation for `Tree` can be found [here](https://godoc.org/golang.org/x/tour/tree#Tree).
+
+
+## Exercise: Web Crawler
+
+In this exercise you'll use Go's concurrency features to parallelize a web crawler.
+Modify the `Crawl` function to fetch URLs in parallel without fetching the same URL twice.
+**Hint**: you can keep a cache of the URLs that have been fetched on a map, but maps alone are not safe for concurrent use!
